@@ -9,6 +9,7 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
 body {
   background: #fff7ea;
 }
@@ -34,13 +35,12 @@ nav {
   border-bottom-right-radius: 7px;
   border-bottom-left-radius: 7px;
   margin: 0 auto;
-
+  background-color: #fff7ea;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   z-index: 1000;
-  background: rgba(255, 247, 234, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.06);
@@ -101,7 +101,6 @@ nav svg {
   nav {
     z-index: 20;
     position: unset;
-    background: #ffffff63;
     padding: 10px 30px;
   }
   nav::after {
@@ -455,7 +454,6 @@ footer {
 }
 
 .nav-solid {
-  background: #fff !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
 }
