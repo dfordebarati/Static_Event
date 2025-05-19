@@ -27,16 +27,25 @@ body {
 
 nav {
   display: flex;
-  max-width: 1500px;
-  min-width: 1500px;
-  padding: 25px 10px 40px 10px;
+  padding: 25px 32px 40px 32px;
   margin-bottom: 25px;
   justify-content: space-between;
-  position: relative;
   align-items: center;
   border-bottom-right-radius: 7px;
   border-bottom-left-radius: 7px;
   margin: 0 auto;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
+  background: rgba(255, 247, 234, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(162, 120, 58, 0.15);
+  transition: background 0.3s, backdrop-filter 0.3s, padding 0.3s, height 0.3s;
 }
 nav::after {
   content: "";
@@ -53,10 +62,9 @@ nav .logo {
   align-items: center;
   font-size: 2rem;
 }
+
 nav .navLinks {
   flex: 2;
-}
-nav .navLinks {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -74,6 +82,8 @@ nav .navLinks .links a {
 nav .navLinks .links a:hover {
   transition: 0.3s;
   cursor: pointer;
+  color: #a2783a;
+  font-weight: 500;
 }
 nav .hamburger {
   display: none;
@@ -430,19 +440,53 @@ footer .banner .tag div button {
   }
 }
 footer {
-  /* Ensures footer content is displayed in a column */
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers the content horizontally */
+  align-items: center;
 }
 
 .banner {
-  /* Style your banner section */
   padding: 20px;
 }
 
 .credits {
-  margin-top: 20px; /* Adds some space between the banner and the credits */
-  text-align: center; /* Centers the text in the div */
+  margin-top: 20px;
+  text-align: center;
 }
 
+.nav-solid {
+  background: #fff !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.nav-glass {
+  background: rgba(255, 247, 234, 0.7) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
+.nav-shrink {
+  padding: 16px 32px 20px 32px !important;
+  height: 60px;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.1);
+}
+
+nav .logo,
+nav .navLinks .links a {
+  transition: font-size 0.3s, padding 0.3s;
+}
+
+.nav-shrink .logo {
+  font-size: 1.6rem !important;
+}
+
+.nav-shrink .navLinks .links a {
+  font-size: 20px !important;
+  padding: 6px 0 !important;
+  letter-spacing: 1.2px;
+}
+
+.nav-shrink .navLinks .links {
+  gap: 20px !important;
+}

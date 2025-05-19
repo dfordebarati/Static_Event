@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-scroll";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
   return (
-    <nav>
+    <nav className="navbar">
       <div className="logo">Refined Gatherings</div>
       <div className={show ? "navLinks showmenu" : "navLinks"}>
         <div className="links">
